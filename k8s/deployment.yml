@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: dispatch-deploy
+  namespace: dispatch
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+        app: dispatch
+  template:
+    metadata:
+        labels:
+           app: dispatch
+    spec:
+      containers:
+        - name: dispatch
+          image: lukassgx/dispatch:latest
+          ports:
+              - containerPort: 58925
