@@ -1,0 +1,27 @@
+services:
+  app:
+    container_name: app
+    build:
+      context: ../app
+      dockerfile: Dockerfile
+    restart: always
+    ports:
+      - 58925:58925
+    networks:
+      - dispatch_network
+
+  cloudflare:
+    image: cloudflare/cloudflared:latest
+    container_name: cloudflare
+    restart: always
+    command: tunnel --no-autoupdate run --token ${TOKEN}
+    env_file:
+      - .env
+    environment:
+      - TOKEN=${TOKEN}
+    networks:
+      - dispatch_network
+
+networks:
+  dispatch_network:
+      internal: true
