@@ -13,10 +13,10 @@
   "license": "MIT",
   "author": "lukas-sgx",
   "type": "commonjs",
-  "main": "app/index.js",
+  "main": "index.js",
   "scripts": {
-    "dev": "nodemon app/index.js",
-    "prod": "node app/index.js"
+    "dev": "nodemon index.js",
+    "prod": "node index.js"
   },
   "dependencies": {
     "express": "^5.2.1",
