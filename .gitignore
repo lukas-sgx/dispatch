@@ -12,3 +12,4 @@ devenv.local.yaml
 node_modules
 package-lock.json
 .env
+*.pem
