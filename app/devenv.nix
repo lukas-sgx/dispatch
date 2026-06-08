@@ -24,7 +24,7 @@
   '';
 
   processes.nodemon = {
-    exec = "cd app;npm run dev";
+    exec = "npm run dev";
   };
 
   # https://devenv.sh/tests/
