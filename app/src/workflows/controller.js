@@ -1,6 +1,4 @@
 const { octokit } = require("../middleware/auth");
-const review = require("../pulls/actions/review");
-const label = require("../pulls/actions/label");
 const jobs_runner = require("./actions/jobs");
 
 const runningJobs = new Map();
@@ -35,11 +33,7 @@ async function controller(data) {
             if (pulls.length === 0) return;
             const pr_number = pulls[0].number;
 
-            await label.add(owner, repo, pr_number, [{ name: "needs: reviewer", color: "312238" }]);
             await jobs_runner.safeToMerge(owner, repo, pr_number, job)
-            try {
-                await review.requestReview(owner, repo, pr_number);
-            } catch {}
         }
     }
 }
