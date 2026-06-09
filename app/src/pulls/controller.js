@@ -1,11 +1,11 @@
 const comment = require("./actions/comment");
+const review = require("./actions/review");
 
 async function handle_new_pr(pull_request, data) {
-    await comment.add(
+    await review.requestReview(
         data.repository.owner.login,
         data.repository.name,
-        pull_request.number,
-        "New PR, don't forget to add reviewers."
+        pull_request.number
     );
 }
 
