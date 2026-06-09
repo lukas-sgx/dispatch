@@ -11,7 +11,7 @@ app.post('/', async (req, res) => {
         await pull_request.controller(req.body)
     }
     if (req.body.workflow_job != undefined) {
-        workflow.controller(req.body)
+        await workflow.controller(req.body)
     }
     res.send("Receive request");
 });

@@ -17,21 +17,23 @@ async function make(owner, repo, label) {
     await octokit.rest.issues.createLabel({
         owner: owner,
         repo: repo,
-        name: label,
-        color: color
+        name: label?.name,
+        color: label?.color ?? color
     })
 }
 
-async function add(owner, repo, pull_number, label) {
-    if (await is_exist(owner, repo, label) == undefined) {
-        await make(owner, repo, label)
+async function add(owner, repo, pull_number, labels) {
+    for (const label of labels) {
+        if (await is_exist(owner, repo, label) == undefined) {
+            await make(owner, repo, label)
+        }
     }
     
     await octokit.rest.issues.addLabels({
         owner: owner,
         repo: repo,
         issue_number: pull_number,
-        labels: [label]
+        labels: labels.map(label => label.name)
     })
 }
 
