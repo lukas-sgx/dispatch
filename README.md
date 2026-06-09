@@ -7,7 +7,7 @@
 <br />
 <div align="center">
   <a href="https://github.com/lukas-sgx/gateflow">
-    <img src="assets/gateflow-logo.png" alt="Logo" height="125" style="border-radius: 10px">
+    <img src="assets/gateflow-logo.svg" alt="Logo" height="125" style="border-radius: 10px">
   </a>
 
   <h3 align="center">Gateflow | GitHub CI/CD Integration</h3>

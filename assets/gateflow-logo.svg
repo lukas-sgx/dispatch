@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <!-- Fond sombre style GitHub -->
+  <rect width="512" height="512" rx="110" fill="#0d1117"/>
+  
+  <!-- Grille de fond subtile (optionnelle mais donne un style tech) -->
+  <circle cx="256" cy="256" r="220" fill="none" stroke="#21262d" stroke-width="2" stroke-dasharray="4 8"/>
+  
+  <!-- Définition des gradients pour le look moderne -->
+  <defs>
+    <linearGradient id="flowGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2f81f7" /> <!-- Bleu GitHub -->
+      <stop offset="100%" stop-color="#56ccf2" /> <!-- Cyan lumineux -->
+    </linearGradient>
+    <linearGradient id="accentGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#3fb950" /> <!-- Vert PR validée -->
+      <stop offset="100%" stop-color="#2ea44f" />
+    </linearGradient>
+  </defs>
+
+  <!-- La "Gate" (Porte / Hexagone de flux) -->
+  <g transform="translate(256, 240)">
+    <!-- Branche de pipeline Gauche -->
+    <path d="M -110,-60 L -50,-120 L 20,-120" fill="none" stroke="url(#flowGradient)" stroke-width="24" stroke-linecap="round" stroke-linejoin="round"/>
+    <!-- Branche de pipeline Droite -->
+    <path d="M 110,-60 L 50,-120 L -20,-120" fill="none" stroke="url(#flowGradient)" stroke-width="24" stroke-linecap="round" stroke-linejoin="round" opacity="0.7"/>
+    
+    <!-- Le Flux Central (Flèches CI/CD qui traversent la gate) -->
+    <path d="M -120,40 L -40,40 L 20,-20 L 120,-20" fill="none" stroke="url(#flowGradient)" stroke-width="24" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M -120,100 L 0,100 L 80,20 L 120,20" fill="none" stroke="url(#accentGradient)" stroke-width="24" stroke-linecap="round" stroke-linejoin="round"/>
+    
+    <!-- Badge "Bot/Automate" (L'engrenage central ou le point de contrôle) -->
+    <circle cx="20" cy="-20" r="28" fill="#0d1117" stroke="url(#accentGradient)" stroke-width="12"/>
+    <circle cx="20" cy="-20" r="10" fill="#3fb950"/>
+  </g>
+
+  <!-- Texte "Gateflow" intégré de manière épurée en bas -->
+  <text x="256" y="440" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica" font-size="36" font-weight="800" fill="#f0f6fc" letter-spacing="2">
+    GATEFLOW<tspan fill="#3fb950">-CI</tspan>
+  </text>
+</svg>
