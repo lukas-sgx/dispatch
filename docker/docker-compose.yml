@@ -24,10 +24,7 @@ services:
       - 8.8.8.8
     networks:
       - dispatch_network
-      - external_network
 
 networks:
   dispatch_network:
-      internal: true
-  external_network:
-      internal: false
+      driver: bridge
