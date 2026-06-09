@@ -93,10 +93,9 @@ cp .env.example .env
 ```
 
 ```env
-GITHUB_APP_ID=your_app_id
-GITHUB_PRIVATE_KEY_PATH=./private-key.pem
-GITHUB_WEBHOOK_SECRET=your_webhook_secret
-PORT=3000
+INSTALLATION_ID=YOUR_INSTALLATION_ID
+APP_ID=YOUR_APP_ID
+PRIVATE_KEY=YOUR_SECRET_KEY
 ```
 
 4. Start the server
