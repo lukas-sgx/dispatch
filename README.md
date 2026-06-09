@@ -1,10 +1,3 @@
-[![Contributors][contributors-shield]][contributors-url]
-[![Forks][forks-shield]][forks-url]
-[![Stargazers][stars-shield]][stars-url]
-[![Issues][issues-shield]][issues-url]
-[![MIT License][license-shield]][license-url]
-
-<br />
 <div align="center">
   <a href="https://github.com/lukas-sgx/gateflow">
     <img src="assets/gateflow-logo.svg" alt="Logo" height="125" style="border-radius: 10px">
@@ -169,17 +162,6 @@ Lukas Soigneux - lukas.soigneux@epitech.eu
 
 * [Octokit](https://github.com/octokit/octokit.js) - GitHub API client
 * [GitHub Webhooks Docs](https://docs.github.com/en/webhooks) - Official webhook reference
-
-[contributors-shield]: https://img.shields.io/github/contributors/lukas-sgx/gateflow.svg?style=for-the-badge
-[contributors-url]: https://github.com/lukas-sgx/gateflow/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/lukas-sgx/gateflow.svg?style=for-the-badge
-[forks-url]: https://github.com/lukas-sgx/gateflow/network/members
-[stars-shield]: https://img.shields.io/github/stars/lukas-sgx/gateflow.svg?style=for-the-badge
-[stars-url]: https://github.com/lukas-sgx/gateflow/stargazers
-[issues-shield]: https://img.shields.io/github/issues/lukas-sgx/gateflow.svg?style=for-the-badge
-[issues-url]: https://github.com/lukas-sgx/gateflow/issues
-[license-shield]: https://img.shields.io/github/license/lukas-sgx/gateflow.svg?style=for-the-badge
-[license-url]: https://github.com/lukas-sgx/gateflow/blob/main/LICENSE
 
 [Node-shield]: https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white
 [Node-url]: https://nodejs.org/
