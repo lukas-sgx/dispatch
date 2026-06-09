@@ -1,12 +1,21 @@
 const comment = require("./actions/comment");
 const review = require("./actions/review");
+const label = require("./actions/label");
 
 async function handle_new_pr(pull_request, data) {
-    await review.requestReview(
-        data.repository.owner.login,
-        data.repository.name,
-        pull_request.number
-    );
+    try {
+        await label.add(
+            data.repository.owner.login,
+            data.repository.name,
+            pull_request.number,
+            "need-reviewer"
+        );
+        await review.requestReview(
+            data.repository.owner.login,
+            data.repository.name,
+            pull_request.number
+        );
+    } catch (err) {}
 }
 
 async function controller(data) {
