@@ -1,6 +1,5 @@
 const { octokit } = require("../../middleware/auth");
 const label = require("../../pulls/actions/label");
-const review = require("../../pulls/actions/review");
 
 async function getMergeableState(owner, repo, pull_number) {
     const { data: pr } = await octokit.pulls.get({ owner, repo, pull_number });
